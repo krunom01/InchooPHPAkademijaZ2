@@ -83,3 +83,53 @@ td {
 </form>    
 </body>
 </html>
+
+<?php
+
+function getSpiralArray($n)
+{
+    $pos = 1;
+    $count = $n;
+    $value = -$n;
+    $sum = -1;
+
+    do
+    {
+        $value = -1 * $value / $n;
+        for ($i = 0; $i < $count; $i++)
+        {
+            $sum += $value;
+            $result[$sum / $n][$sum % $n] = $pos++;
+        }
+        $value *= $n;
+        $count--;
+        for ($i = 0; $i < $count; $i++)
+        {
+            $sum += $value;
+            $result[$sum / $n][$sum % $n] = $pos++;
+        }
+    } while ($count > 0);
+
+    return $result;
+}
+
+function PrintArray($array)
+{
+
+    for ($i = 0; $i < count($array); $i++) {
+        echo "<tr>";
+        for ($j = 0; $j < count($array); $j++) {
+            echo "<td>".$array[$i][$j] . "</td>";
+        }
+        echo "</tr>";
+    }
+
+}
+
+$arr = getSpiralArray(16);
+echo "<table>";
+PrintArray($arr);
+echo "</table>";
+?>
+
+

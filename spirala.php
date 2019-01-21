@@ -5,10 +5,14 @@ $col =4;
 
 
 $data = array();
-$counter= 0;
+
 //fill the first row
-    for($i=0;$i <= $row;$i++){
-        $data[0][$i]=$counter++;
+    for($i=0;$i<$row;$i++){
+        $kolone = array();
+        for($j=0;$j<$col;$j++){
+            $kolone[]=0;
+        }
+        $data[]=$kolone;
     }
 
     print_r($data);
