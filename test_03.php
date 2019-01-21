@@ -30,7 +30,7 @@ if(isset($_POST["number"])){
     echo "korijen najveceg broja niza"  . intval(round($korijen1)) . " korijen broja +1" . "<hr>"; // korijen najveceg broja niza!
     echo "kvadrirani korijen +1: "  . $numberTable . "<hr>"; // kvadrirani korijen +1
 
-     
+     echo $numberTable;
     echo '<table border="1">';
 
     $counter = 0;
@@ -49,7 +49,7 @@ if(isset($_POST["number"])){
     }
 	  	echo "</tr>";
     }
-		
+
 
 echo("</table>");
 
