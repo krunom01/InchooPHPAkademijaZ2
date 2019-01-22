@@ -23,7 +23,9 @@ td {
 </style>
 <body>
 <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
-   Numbers: <input type="text" name="number">
+   Numbers: <input type="text" name="number"><br />
+    Task_01:<input type="radio" name="radio" value="task_01"><br />
+    Task_02:<input type="radio" name="radio" value="task_02"><br />
     <input type="submit">
 </form>    
 </body>
